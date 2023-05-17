@@ -1,0 +1,14 @@
+{
+  "name": "platform_actualization",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "cypress": "^12.12.0"
+  },
+  "scripts": {
+    "cypress:open": "cypress open"
+  },
+  "author": "",
+  "license": "ISC"
+}
