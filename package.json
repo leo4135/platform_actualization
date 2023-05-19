@@ -10,5 +10,10 @@
     "cypress:open": "cypress open"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "convert-excel-to-json": "^1.7.0",
+    "node-excel-to-json": "^0.0.3",
+    "xlsx": "^0.18.5"
+  }
 }
