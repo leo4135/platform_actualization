@@ -3,7 +3,9 @@ const fs = require('fs');
 
 http.createServer(function (request, response) {
     console.log(`Запрошенный адрес: ${request.url}`);
-    response.setHeader('Content-Type', 'json');
+    response.setHeader('Content-Type', 'text/json; charset=utf-8')
+    response.setHeader('Access-Control-Allow-Origin', '*');
+    response.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
     const filePath = request.url.substr(1);
     fs.readFile(filePath, function (error, data) {
         if (error) {

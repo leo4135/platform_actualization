@@ -1,24 +1,22 @@
 const excelToJson = require('convert-excel-to-json');
-const filesPath = ['./excel_files/excel.xlsx']
+const filesPath = ['./excel_files/НИИРГ Рамзаева.xlsx']
 
 
 for (let n = 0; n < filesPath.length; n++) {
 
     const result = excelToJson({
-        sourceFile: filesPath[0],
+        sourceFile: filesPath[n],
         header: {
             // Is the number of rows that will be skipped and will not be present at our result object. Counting from top to bottom
             rows: 2
         }
     });
 
-
     let ogrn, inn, fullNameRus, fullNameEng, shortNameRus, shortNameEng, typeOrg, bossFullName,
         bossFullNameEng, bossRoleRus, bossRoleEng, infoAboutOrgRus, infoAboutOrgEng, keyWords,
         OKSO, GRNTI, RNF, VAK, adressRus, adressEng, telephone, webSite, email, VK, TG, youtube, rutube
 
     for (let i = 0; i < result['Основная информация'].length; i++) {
-
 
         switch (result['Основная информация'][i].A) {
             case 'ОГРН':
